@@ -70,7 +70,7 @@ class Fib:
         if self.n:
             return f'Fib({self.n})'
         else:
-            return f'Fib()'
+            return 'Fib()'
 
     def __iter__(self):
         return FibIter(self.n)
