@@ -80,16 +80,16 @@ class AVLTree(BST):
         tree code is fairly different from our class hierarchy,
         however, so you will have to adapt their code.
         '''
-        oldRoot = node
-        if oldRoot.right:
-            newRoot = Node(oldRoot.right.value)
-            newRoot.left = Node(oldRoot.value)
-            newRoot.right = oldRoot.right.right
-            newRoot.left.left = oldRoot.left
-            newRoot.left.right = oldRoot.right.left
-            return newRoot
+        old_root = node
+        if old_root.right:
+            new_root = Node(old_root.right.value)
+            new_root.left = Node(old_root.value)
+            new_root.right = old_root.right.right
+            new_root.left.left = old_root.left
+            new_root.left.right = old_root.right.left
+            return new_root
         else:
-            return oldRoot
+            return old_root
 
     @staticmethod
     def _right_rotate(node):
@@ -103,16 +103,16 @@ class AVLTree(BST):
         tree code is fairly different from our class hierarchy,
         however, so you will have to adapt their code.
         '''
-        oldRoot = node
-        if oldRoot.left:
-            newRoot = Node(oldRoot.left.value)
-            newRoot.right = Node(oldRoot.value)
-            newRoot.left = oldRoot.left.left
-            newRoot.right.right = oldRoot.right
-            newRoot.right.left = oldRoot.left.right
-            return newRoot
+        old_root = node
+        if old_root.left:
+            new_root = Node(old_root.left.value)
+            new_root.right = Node(old_root.value)
+            new_root.left = old_root.left.left
+            new_root.right.right = old_root.right
+            new_root.right.left = old_root.left.right
+            return new_root
         else:
-            return oldRoot
+            return old_root
 
     def insert(self, value):
         '''
