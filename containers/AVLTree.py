@@ -63,9 +63,9 @@ class AVLTree(BST):
                 return False
             else:
                 if node.left:
-                        ret &= AVLTree._is_avl_satisfied(node.left)
+                    ret &= AVLTree._is_avl_satisfied(node.left)
                 if node.right:
-                        ret &= AVLTree._is_avl_satisfied(node.right)
+                    ret &= AVLTree._is_avl_satisfied(node.right)
             return ret
 
     @staticmethod
