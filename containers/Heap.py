@@ -197,7 +197,7 @@ class Heap(BinaryTree):
             # print("binary_str=[", binary_str, ']')
             # print("self.num_nodes_less_1=", self.num_nodes_less_1)
             last_value, self.root = Heap._remove_bottom_right(
-                    self.root, binary_str)
+                self.root, binary_str)
             if self.root:
                 self.root.value = last_value
             self.root = Heap._trickle(self.root)
@@ -219,7 +219,7 @@ class Heap(BinaryTree):
                     # print("node=", node)
                 else:
                     bottom_right, node.left = Heap._remove_bottom_right(
-                            node.left, binary_str[1:])
+                        node.left, binary_str[1:])
             if binary_str[0] == '1':
                 # print (' 1')
                 if len(binary_str) == 1:
@@ -227,7 +227,7 @@ class Heap(BinaryTree):
                     node.right = None
                 else:
                     bottom_right, node.right = Heap._remove_bottom_right(
-                            node.right, binary_str[1:])
+                        node.right, binary_str[1:])
             print('bottom_right=', bottom_right)
             print("node=", node)
             return bottom_right, node
